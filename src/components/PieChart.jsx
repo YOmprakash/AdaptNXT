@@ -35,7 +35,7 @@ const CustomTooltip = ({ active, payload }) => {
   if (active && payload && payload.length) {
     const { name, value, percent } = payload[0];
     return (
-      <div className="bg-white p-2 border rounded shadow">
+      <div className="p-2 bg-white border rounded shadow">
         <p>{`${name}: ${value.toFixed(1)} (${(percent * 100).toFixed(1)}%)`}</p>
       </div>
     );
@@ -51,7 +51,7 @@ const CustomLegend = ({ payload }) => {
           <div className="flex items-center">
             <div
               style={{ backgroundColor: entry.color }}
-              className="w-4 h-4 rounded-full mr-2"
+              className="w-4 h-4 mr-2 rounded-full"
             ></div>
             <span>{entry.value}</span>
           </div>
@@ -62,16 +62,16 @@ const CustomLegend = ({ payload }) => {
 };
 
 const CustomPieChart = () => (
-  <div className="p-4">
+  <div>
 
     <div className="relative">
      
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center mt-4 z-10">
-        <p className="text-[12px] font-sm">Total</p>
-        <p className="text-1xl font-bold">2659</p>
+      <div className="absolute z-10 -mt-4 text-center transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+        <p className="text-[12px] text-black font-sm font-semibold">Total</p>
+        <p className="font-bold text-1xl">2659</p>
       </div>
-      <div className="flex gap-2 items-center mb-4 border-b pb-2">
-        <h2 className="text-xl text-gray-600 font-semibold">Portion of Sales</h2>
+      <div className="flex items-center gap-2 pb-2 mb-4 border-b">
+        <h2 className="pb-2 text-xl font-semibold text-gray-700">Portion of Sales</h2>
         <IoMdInformationCircleOutline className="text-[20px] text-gray-500" />
       </div>
       <ResponsiveContainer width="100%" height={300}>

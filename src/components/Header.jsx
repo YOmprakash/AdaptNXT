@@ -1,10 +1,10 @@
-import React from 'react';
+import Logo from '../assets/logo.png';
 import { FaBars } from 'react-icons/fa';
 
 const Header = ({ toggleSidebar }) => (
-    <header className="bg-blue-500 text-white p-4 flex justify-between items-center">
-        <h1 className="text-2xl">Dashboard</h1>
-        <FaBars className="block md:hidden cursor-pointer" onClick={toggleSidebar} />
+    <header className="flex items-center justify-between p-4 bg-white border-b-2 border-dotted">
+       <img src={Logo} alt='Logo' className='object-contain max-w-[200px]' />
+        <FaBars className="block cursor-pointer md:hidden" onClick={toggleSidebar} />
     </header>
 );
 
