@@ -30,7 +30,7 @@ const iconColors = {
 
 const Sidebar = ({ isOpen, toggleSidebar }) => (
   <aside
-    className={`bg-white text-gray-800 border-r-2 border-dotted w-60 space-y-6 py-7 px-2 fixed inset-y-0 left-0 transform ${
+    className={`bg-white text-gray-800  w-60 space-y-6 py-7 px-2 fixed inset-y-0 left-0 transform ${
       isOpen ? "translate-x-0" : "-translate-x-full"
     } md:relative md:translate-x-0 transition z-40 duration-200 ease-in-out`}
   >
